@@ -1,15 +1,13 @@
 import React from "react";
 import { 
   SafeAreaView,
-  View,
   Text,
   FlatList, 
   StyleSheet,
-  Image,
   TextInput
 } from "react-native";
 import shop_data from "./shop_data.json"
-import ShopCard from "./components/ShopCard";
+import ShopCard from "./src/components/ShopCard";
 
 const App = () => {
   return (
@@ -32,7 +30,7 @@ export default App;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex:1
   },
   title: {
     fontSize: 30,
