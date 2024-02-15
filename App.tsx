@@ -4,23 +4,26 @@ import {
   View,
   Text,
   FlatList, 
-  ScrollView,
   StyleSheet,
   Image,
-  Dimensions,
   TextInput
 } from "react-native";
+import shop_data from "./shop_data.json"
+import ShopCard from "./components/ShopCard";
 
 const App = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style = {styles.container}>
         <Text style = {styles.title}>PRODUCTS</Text>
-          <View>
           <TextInput style = {styles.searcBar}
           placeholder="Arama yapın..."
           clearButtonMode="always"
           />
-          </View>
+          <FlatList 
+          data = {shop_data}
+          renderItem = {({item}) => <ShopCard products={item}/>}
+
+          />
       </SafeAreaView> 
   ) 
 }
@@ -28,6 +31,9 @@ const App = () => {
 export default App;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
   title: {
     fontSize: 30,
     fontWeight: "bold",
