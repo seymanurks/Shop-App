@@ -22,7 +22,7 @@ const App = () => {
           <FlatList 
           data = {shop_data}
           renderItem = {({item}) => <ShopCard products={item}/>}
-
+          numColumns={2}
           />
       </SafeAreaView> 
   ) 

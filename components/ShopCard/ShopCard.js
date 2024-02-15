@@ -19,7 +19,6 @@ import {
         />
         <Text style = {styles.title}>{products.title}</Text>
         <Text style = {styles.price}>{products.price}</Text>
-      
         </View>
     )
   }
