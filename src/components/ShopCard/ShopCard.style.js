@@ -36,6 +36,7 @@ export default StyleSheet.create({
     inStock: {
         fontWeight: "bold",
         textAlign: "left",
-        color: "red"
+        color: "red",
+        margin: 5
     },
 })

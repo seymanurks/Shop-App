@@ -8,6 +8,11 @@ import {
 
   const ShopCard = ({products}) => {
 
+    function isStock() {
+      if (!products.inStock)
+      return <Text style = {styles.inStock}>STOKTA YOK</Text>
+    }
+
     return(
         <View style = {styles.container}>
           <View style = {styles.inner_container}>
@@ -16,7 +21,7 @@ import {
             />
             <Text style = {styles.title}>{products.title}</Text>
             <Text style = {styles.price}>{products.price}</Text>
-            <Text style = {styles.inStock}>{products.inStock}</Text>
+            <Text>{isStock()}</Text>
          </View>
         </View>
     )
